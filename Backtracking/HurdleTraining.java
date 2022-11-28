@@ -25,19 +25,20 @@ public class HurdleTraining {
                 cal += 5;
             int down = grid(board, i + 1, j, cal);
             int right = grid(board, i, j + 1, cal);
-            return Math.max(down, right);
+            if (Math.max(down, right) > 0)
+                return Math.max(down, right);
+            cal -= 5;
         }
-        cal -= 5;
         return cal;
     }
 
     public static void main(String[] args) {
-        // char[][] board = { { '.', '.', '#', '#' }, { '#', '.', '#', '#' }, { '#',
-        // '.', '.', '.' } };
-        char[][] board = { { '.', '.', '.', '#', '#' }, { '.', '#', '.', '.', '#' },
-                { '.', '#', '#', '.', '#' },
-                { '.', '.', '#', '.', '.' } };
-        burnCalories(board, 30);
+        char[][] board = { { '.', '.', '#', '#' }, { '#', '.', '#', '#' }, { '#',
+                '.', '.', '.' } };
+        // char[][] board = { { '.', '.', '.', '#', '#' }, { '.', '#', '.', '.', '#' },
+        // { '.', '#', '#', '.', '#' },
+        // { '.', '.', '#', '.', '.' } };
+        burnCalories(board, 15);
     }
 
 }
