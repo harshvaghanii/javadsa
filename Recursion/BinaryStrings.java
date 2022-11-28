@@ -13,7 +13,7 @@ public class BinaryStrings {
     }
 
     public static void main(String[] args) {
-        printBinaryStrings(2, "", 0);
+        printBinaryStrings(3, "", 0);
         System.out.println();
     }
 }
