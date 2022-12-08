@@ -20,18 +20,14 @@ public class PairSum2 {
         while (left_pointer != right_pointer) {
             if (nums[left_pointer] + nums[right_pointer] == target) {
                 res.add(left_pointer);
-                 res.add(right_pointer);
+                res.add(right_pointer);
                 break;
             }
 
             if (nums[left_pointer] + nums[right_pointer] > target) {
-                right_pointer--;
-                if (right_pointer == -1)
-                    right_pointer = nums.length - 1;
+                right_pointer = (nums.length + right_pointer - 1) % nums.length;
             } else {
-                left_pointer++;
-                if (left_pointer == nums.length)
-                    left_pointer = 0;
+                left_pointer = (left_pointer + 1) % nums.length;
             }
 
         }
