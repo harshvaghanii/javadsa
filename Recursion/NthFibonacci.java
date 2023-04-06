@@ -8,7 +8,7 @@ public class NthFibonacci {
     }
 
     public static void main(String[] args) {
-        int n = 5;
+        int n = 100;
         int fib = fib(n);
         System.out.println("The nth fibonacci number is : " + fib);
     }
